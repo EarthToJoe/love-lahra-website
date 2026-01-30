@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lahra's Life
 
-## Getting Started
+A sophisticated lifestyle website built with Next.js 14, featuring elevated aesthetics that blend New York sophistication, New England elegance, and unapologetic confidence.
 
-First, run the development server:
+## 🎨 Design Philosophy
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This application embodies:
+- **New York sophistication** - confident, polished, metropolitan
+- **New England elegance** - refined, classic, understated luxury  
+- **DC power-player confidence** - authoritative, influential, unapologetic
+- **Coastal refinement** - fresh, elevated, effortlessly chic
+- **Black-tie sophistication** - formal elegance with impeccable taste
+
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS with custom sophisticated color palette
+- **Database**: PostgreSQL with Prisma ORM
+- **Authentication**: NextAuth.js
+- **Real-time**: Socket.io
+- **Animations**: Framer Motion
+- **Forms**: React Hook Form with Zod validation
+- **UI Components**: Radix UI primitives
+
+## 🎨 Color Palette
+
+- **Primary**: Deep navy (#1e293b) - confidence and authority
+- **Accent**: Champagne gold (#d4af37) - luxury and sophistication  
+- **Blush**: Strategic pink accents (#ec4899) - feminine confidence
+- **Neutral**: Crisp whites and elegant grays
+
+## 🏃‍♀️ Getting Started
+
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+2. **Set up environment variables**:
+   Copy `.env.local` and configure your database and service credentials.
+
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**:
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                 # Next.js App Router pages
+├── components/          # React components
+│   ├── ui/             # Reusable UI components
+│   ├── layout/         # Layout components
+│   └── features/       # Feature-specific components
+├── lib/                # Utility functions and configurations
+├── types/              # TypeScript type definitions
+├── hooks/              # Custom React hooks
+└── styles/             # Additional styling files
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Content Management**: Sophisticated content sections for daily life, fashion, and dining
+- **Interactive Polling**: Elegant voting system for community engagement
+- **User Authentication**: Secure account management with NextAuth.js
+- **Comment System**: Threaded discussions with moderation
+- **Image Galleries**: Responsive, optimized image displays
+- **Donation System**: Secure payment processing with Stripe
+- **Real-time Updates**: Live notifications and updates
+- **Admin Panel**: Content management and moderation tools
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Development
 
-## Learn More
+This project follows a spec-driven development approach with comprehensive testing:
 
-To learn more about Next.js, take a look at the following resources:
+- **Unit Tests**: Specific examples and edge cases
+- **Property-Based Tests**: Universal correctness properties using fast-check
+- **Integration Tests**: End-to-end workflow validation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Private project - All rights reserved.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Crafted with sophistication and unapologetic confidence* ✨

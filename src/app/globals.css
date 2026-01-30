@@ -1,26 +1,119 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* CSS Custom Properties for Dynamic Theming */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary Colors */
+  --color-primary-50: #f0f4f8;
+  --color-primary-100: #d9e2ec;
+  --color-primary-200: #bcccdc;
+  --color-primary-300: #9fb3c8;
+  --color-primary-400: #829ab1;
+  --color-primary-500: #627d98;
+  --color-primary-600: #486581;
+  --color-primary-700: #334e68;
+  --color-primary-800: #243b53;
+  --color-primary-900: #102a43;
+  
+  /* Accent Colors */
+  --color-accent-50: #fefdf7;
+  --color-accent-100: #fef7e0;
+  --color-accent-200: #fdecc8;
+  --color-accent-300: #fbdfa7;
+  --color-accent-400: #f9d071;
+  --color-accent-500: #f7c948;
+  --color-accent-600: #f4b942;
+  --color-accent-700: #e09f3e;
+  --color-accent-800: #cc8b3a;
+  --color-accent-900: #a67c52;
+  
+  /* Neutral Colors */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Theme-aware utility classes */
+.bg-primary { background-color: var(--color-primary-500); }
+.bg-primary-50 { background-color: var(--color-primary-50); }
+.bg-primary-100 { background-color: var(--color-primary-100); }
+.bg-primary-500 { background-color: var(--color-primary-500); }
+.bg-primary-600 { background-color: var(--color-primary-600); }
+.bg-primary-700 { background-color: var(--color-primary-700); }
+.bg-primary-800 { background-color: var(--color-primary-800); }
+.bg-primary-900 { background-color: var(--color-primary-900); }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+.bg-accent { background-color: var(--color-accent-500); }
+.bg-accent-50 { background-color: var(--color-accent-50); }
+.bg-accent-100 { background-color: var(--color-accent-100); }
+.bg-accent-400 { background-color: var(--color-accent-400); }
+.bg-accent-500 { background-color: var(--color-accent-500); }
+.bg-accent-600 { background-color: var(--color-accent-600); }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.text-primary { color: var(--color-primary-500); }
+.text-primary-300 { color: var(--color-primary-300); }
+.text-primary-400 { color: var(--color-primary-400); }
+.text-primary-500 { color: var(--color-primary-500); }
+.text-primary-600 { color: var(--color-primary-600); }
+.text-primary-700 { color: var(--color-primary-700); }
+.text-primary-800 { color: var(--color-primary-800); }
+.text-primary-900 { color: var(--color-primary-900); }
+
+.text-accent { color: var(--color-accent-500); }
+.text-accent-400 { color: var(--color-accent-400); }
+.text-accent-600 { color: var(--color-accent-600); }
+.text-accent-700 { color: var(--color-accent-700); }
+.text-accent-800 { color: var(--color-accent-800); }
+
+.border-primary { border-color: var(--color-primary-500); }
+.border-primary-100 { border-color: var(--color-primary-100); }
+.border-primary-200 { border-color: var(--color-primary-200); }
+.border-primary-500 { border-color: var(--color-primary-500); }
+.border-primary-700 { border-color: var(--color-primary-700); }
+
+.border-accent { border-color: var(--color-accent-500); }
+.border-accent-100 { border-color: var(--color-accent-100); }
+.border-accent-200 { border-color: var(--color-accent-200); }
+
+/* Gradient utilities */
+.from-primary-50 { --tw-gradient-from: var(--color-primary-50); }
+.from-primary-600 { --tw-gradient-from: var(--color-primary-600); }
+.from-primary-700 { --tw-gradient-from: var(--color-primary-700); }
+.from-primary-800 { --tw-gradient-from: var(--color-primary-800); }
+.from-primary-900 { --tw-gradient-from: var(--color-primary-900); }
+
+.from-accent-50 { --tw-gradient-from: var(--color-accent-50); }
+.from-accent-500 { --tw-gradient-from: var(--color-accent-500); }
+.from-accent-600 { --tw-gradient-from: var(--color-accent-600); }
+
+.to-primary-50 { --tw-gradient-to: var(--color-primary-50); }
+.to-primary-600 { --tw-gradient-to: var(--color-primary-600); }
+.to-primary-700 { --tw-gradient-to: var(--color-primary-700); }
+.to-primary-800 { --tw-gradient-to: var(--color-primary-800); }
+
+.to-accent-600 { --tw-gradient-to: var(--color-accent-600); }
+.to-accent-700 { --tw-gradient-to: var(--color-accent-700); }
+.to-accent-800 { --tw-gradient-to: var(--color-accent-800); }
+
+.via-primary-800 { --tw-gradient-via: var(--color-primary-800); }
+
+/* Hover states */
+.hover\:text-primary-600:hover { color: var(--color-primary-600); }
+.hover\:text-primary-700:hover { color: var(--color-primary-700); }
+.hover\:text-accent-700:hover { color: var(--color-accent-700); }
+.hover\:from-primary-700:hover { --tw-gradient-from: var(--color-primary-700); }
+.hover\:from-accent-600:hover { --tw-gradient-from: var(--color-accent-600); }
+.hover\:to-accent-700:hover { --tw-gradient-to: var(--color-accent-700); }
+.hover\:to-primary-700:hover { --tw-gradient-to: var(--color-primary-700); }
+
+.hover\:scale-102:hover {
+  transform: scale(1.02);
 }
