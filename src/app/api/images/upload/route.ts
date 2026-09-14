@@ -3,12 +3,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import { writeFile, mkdir } from 'fs/promises'
 
 import { join } from 'path'
+import { UPLOAD_DIR } from '@/lib/uploads'
 import { existsSync } from 'fs'
 
 // Force dynamic rendering
 export const dynamic = 'force-dynamic'
 
-const UPLOAD_DIR = join(process.cwd(), 'public/uploads')
 const MAX_FILE_SIZE = 5 * 1024 * 1024 // 5MB
 const ALLOWED_TYPES = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp']
 

@@ -41,3 +41,11 @@ yarn-error.log*
 next-env.d.ts
 
 /src/generated/prisma
+
+# personal Claude Code permissions for this machine
+.claude/settings.local.json
+
+# Uploaded photos are content, not code — never commit them.
+# Served from UPLOAD_DIR by src/app/uploads/[...path]; see src/lib/uploads.ts.
+/uploads/
+/public/uploads/

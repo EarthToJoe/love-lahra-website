@@ -3,12 +3,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import { readdir, stat } from 'fs/promises'
 
 import { join } from 'path'
+import { UPLOAD_DIR } from '@/lib/uploads'
 import { existsSync } from 'fs'
 
 // Force dynamic rendering
 export const dynamic = 'force-dynamic'
 
-const UPLOAD_DIR = join(process.cwd(), 'public/uploads')
 
 export async function GET(request: NextRequest) {
   try {
